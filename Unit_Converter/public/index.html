@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conversor de Unidades</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="converter-card">
+      <h1>Conversor de Unidades</h1>
+      
+      <!-- Pestañas de Selección -->
+      <div class="tabs">
+        <button class="tab-btn active" data-type="length">Longitud</button>
+        <button class="tab-btn" data-type="temperature">Temperatura</button>
+      </div>
+
+      <form id="convertForm">
+        <div class="input-group">
+          <label>Valor a convertir</label>
+          <input type="number" id="inputValue" placeholder="Ej: 20" required step="any">
+        </div>
+
+        <div class="units-row">
+          <div class="select-group">
+            <label>De</label>
+            <select id="fromUnit"></select>
+          </div>
+          <div class="select-group">
+            <label>A</label>
+            <select id="toUnit"></select>
+          </div>
+        </div>
+
+        <button type="submit" class="convert-btn">Convertir</button>
+      </form>
+
+      <div id="resultBox" class="result-box hidden">
+        <p class="result-label">Resultado:</p>
+        <p id="resultValue" class="result-value">0</p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js" type="module"></script>
+</body>
+</html>   

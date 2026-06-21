@@ -1,0 +1,137 @@
+:root {
+  --primary: #6366f1;
+  --primary-hover: #4f46e5;
+  --bg: #f3f4f6;
+  --card-bg: #ffffff;
+  --text: #1f2937;
+  --border: #e5e7eb;
+}
+
+* { 
+    box-sizing: border-box; 
+    margin: 0; 
+    padding: 0; 
+    font-family: 'Segoe UI', system-ui, sans-serif; 
+}
+
+body {
+  background-color: var(--bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: var(--text);
+}
+
+.converter-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 450px;
+}
+
+h1 { 
+    text-align: center; 
+    margin-bottom: 1.5rem; 
+    font-size: 1.5rem; 
+    color: var(--primary); 
+}
+
+/* Tabs */
+.tabs { 
+    display: flex; 
+    gap: 10px; 
+    margin-bottom: 1.5rem; 
+    border-bottom: 2px solid var(--border); 
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #6b7280;
+  transition: all 0.3s;
+}
+.tab-btn.active {
+  color: var(--primary);
+  border-bottom: 3px solid var(--primary);
+  margin-bottom: -2px;
+}
+
+/* Form */
+.input-group, .select-group { 
+    margin-bottom: 1rem; 
+}
+
+label { 
+    display: block; 
+    margin-bottom: 0.5rem; 
+    font-size: 0.9rem; 
+    font-weight: 500; 
+}
+
+input, select {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input:focus, select:focus { 
+    outline: none; 
+    border-color: var(--primary); 
+}
+
+.units-row { 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 1rem; 
+}
+
+.convert-btn {
+  width: 100%;
+  padding: 0.85rem;
+  background-color: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 0.5rem;
+}
+
+.convert-btn:hover { 
+    background-color: var(--primary-hover); 
+}
+
+/* Resultado */
+.result-box {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  text-align: center;
+  border: 1px solid var(--border);
+}
+.result-box.hidden { 
+    display: none; 
+}
+.result-label { 
+    font-size: 0.9rem; 
+    color: #6b7280; 
+}
+.result-value { 
+    font-size: 1.5rem; 
+    font-weight: bold; 
+    color: var(--primary); 
+    margin-top: 0.25rem; 
+}   

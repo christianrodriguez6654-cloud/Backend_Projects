@@ -1,0 +1,24 @@
+{
+  "name": "unit_converter",
+  "version": "1.0.0",
+  "description": "[EN]Build a simple web app that can convert between different units of measurement. It can convert units of length, weight, volume, area, temperature, and more.[ES]Calculadora de conversión de unidades con Node.js y ES Modules.",
+  "homepage": "https://github.com/christianrodriguez6654-cloud/Backend_Projects#readme",
+  "bugs": {
+    "url": "https://github.com/christianrodriguez6654-cloud/Backend_Projects/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christianrodriguez6654-cloud/Backend_Projects.git"
+  },
+  "license": "ISC",
+  "author": "Christian Rodriguez Messa",
+  "type": "module",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/app.js",
+    "dev": "node --watch src/app.js"
+  },
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
