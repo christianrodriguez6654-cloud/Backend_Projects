@@ -12,7 +12,7 @@ app.use(express.json());
 app.use('/api', routes);
 
 // Ruta de salud: para verificar que el servidor está vivo
-app.get('/inicio', (req, res) => {
+app.get('/', (req, res) => {
   res.json({ status: 'OK', message: 'Server running' });
 });
 
@@ -20,5 +20,5 @@ app.get('/inicio', (req, res) => {
 app.use(errorHandler);
 
 app.listen(config.port, () => {
-  console.log(`🚀 Server running on http://localhost:${config.port}`);
+  console.log(`🚀 Server running on http://localhost:${config.port}/`);
 });
