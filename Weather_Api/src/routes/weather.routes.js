@@ -1,5 +1,9 @@
-// weather.routes.js
 const { Router } = require('express');
+const { getWeather } = require('../controllers/weather.controller');
+
 const router = Router();
-// Los endpoints van aquí en la Fase 3
+
+// GET /api/weather/:city
+router.get('/:city', getWeather);
+
 module.exports = router;

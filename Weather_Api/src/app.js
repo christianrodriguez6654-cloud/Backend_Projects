@@ -2,6 +2,7 @@ const express = require('express');
 const config = require('./config/env');
 const routes = require('./routes/index');
 const errorHandler = require('./middlewares/errorHandler');
+require('./config/database');
 
 const app = express();
 
@@ -12,7 +13,7 @@ app.use(express.json());
 app.use('/api', routes);
 
 // Ruta de salud: para verificar que el servidor está vivo
-app.get('/', (req, res) => {
+app.get('/health', (req, res) => {
   res.json({ status: 'OK', message: 'Server running' });
 });
 
